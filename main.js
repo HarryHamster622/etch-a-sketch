@@ -27,7 +27,12 @@ function createGrid(sL) {
             let gridSpot = document.createElement('div')
             gridSpot.classList.add('gridSpot');
             gridRow.appendChild(gridSpot);
+            gridSpot.addEventListener("mouseover", darkenSquare);
         }
         gridContainer.appendChild(gridRow);
     }
+}
+
+function darkenSquare(e) {
+    e.target.style.backgroundColor = "black";
 }
